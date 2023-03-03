@@ -3,6 +3,8 @@ Hangman is a classic game in which a player thinks of a word and the other playe
 
 This is an implementation of the Hangman game, where the computer thinks of a word and the user tries to guess it.
 
+## Milestone 2
+
 The file milestone_2.py contains code that randomly picks a word from a given list. The user is then asked to guess a single letter. The code also validates that the length of the input is 1 and that it is alphabetical. You can see the code below:
 
 **import random
@@ -19,3 +21,6 @@ if len(guess) == 1 and guess.isalpha() == True:
     print('Good guess!')
 else:
     print('Oops! That is not a valid input.')**
+
+## Milestone 3
+
