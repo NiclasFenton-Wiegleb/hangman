@@ -23,6 +23,10 @@ class Hangman:
             for letter in range(len(self.word)):
                 if self.word[letter] == guess:
                     self.word_guessed[letter] = guess
+        else:
+            self.num_lives = self.num_lives - 1
+            print("Sorry, "+guess+" is not in the word.")
+            print("You have "+str(self.num_lives)+" lives left.")
         self.num_letters = self.num_letters - 1
 
             
@@ -42,4 +46,3 @@ x = Hangman(fruit_lst)
 
 x.ask_for_input()
 print(x.word_guessed)
-
