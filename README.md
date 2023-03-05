@@ -39,7 +39,6 @@ word_list = ['Apple', 'Bannana', 'Mango', 'Pear', 'Grapes']
 
 word = random.choice(word_list)
 
-
 def check_guess(guess):
     guess = guess.lower()
     if guess in word:
@@ -55,22 +54,14 @@ def ask_for_input():
         else:
             print("Invalid letter. Please, enter a single alphabetical character.")
     check_guess(guess)
-
-ask_for_input()
 ```
 
-## Milestone 3
+## Milestone 4
 
 Building on the above, a class function is added in mileston_4.py, initialising its attributes and the check_guess as well as the ask_for_input methods are moved into the class. This updated code can keep track of previous guesses, number of lives and reveal where letters are in the word following a correct guess.
 Please see the code below:
 
 ```
-import random
-
-fruit_lst = ['apple', 'banana', 'orange', 'lemon', 'lime', 'melon', 'watermelon', 'grape', 'grapefruit', 'plum', 'mango', 'pineapple', 
-                'kiwi', 'peach', 'avocado', 'coconut', 'apricot', 'blueberry', 'blackberry', 'strawberry', 'raspberry', 'cherry', 'pear', 
-                'mandarin', 'durian', 'passion fruit', 'persimmon', 'papaya', 'pomegranate']
-
 class Hangman:
     def __init__(self,word_list, num_lives = 5) -> None:
         self.word = random.choice(word_list)
@@ -109,8 +100,4 @@ class Hangman:
                 self.check_guess(guess)
                 self.list_of_guesses.append(guess)
                 break
-
-x = Hangman(fruit_lst)
-
-x.ask_for_input()
 ```
