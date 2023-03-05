@@ -101,3 +101,7 @@ class Hangman:
                 self.list_of_guesses.append(guess)
                 break
 ```
+
+## Milestone 5
+
+Finally, milestone_5.py brings the whole hangman game together. T
