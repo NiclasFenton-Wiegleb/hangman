@@ -128,9 +128,9 @@ def ask_for_input(self):
         while True:
             print(self.word_guessed)
             guess = input("Guess a single letter or the whole word:\n")
-        *** if guess == self.word:
+             **if guess == self.word:
                 self.num_letters = 0
-                break ***
+                break**
             elif len(guess) != 1 or guess.isalpha() != True:
                 print("Invalid letter. Please, enter a single alphabetical character.")
             elif guess in self.list_of_guesses:
