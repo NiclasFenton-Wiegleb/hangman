@@ -104,4 +104,39 @@ class Hangman:
 
 ## Milestone 5
 
-Finally, milestone_5.py brings the whole hangman game together. T
+Finally, milestone_5.py brings the whole hangman game together. The play_game function takes a list of words as a parameter and creates a Hangman class object. It then checks whether num_lives has dropped to zero or the word has been guessed. If neither of the conditions are met, it will continue running the ask_for_input function. See the function below:
+
+```
+def play_game(word_list):
+    num_lives = 5
+    game = Hangman(word_list, num_lives)
+    while True:
+        if game.num_lives == 0:
+            print('You lost!\nThe word was '+game.word+'.')
+            break
+        elif game.num_letters > 0:
+            game.ask_for_input()
+        else:
+            print("Congratulations. You won the game!")
+            break
+```
+
+The ask_for _input function of the Hangman class is also modified to allow players to guess the whole word at once:
+
+```
+def ask_for_input(self):
+        while True:
+            print(self.word_guessed)
+            guess = input("Guess a single letter or the whole word:\n")
+        *** if guess == self.word:
+                self.num_letters = 0
+                break ***
+            elif len(guess) != 1 or guess.isalpha() != True:
+                print("Invalid letter. Please, enter a single alphabetical character.")
+            elif guess in self.list_of_guesses:
+                print("You already tried that letter!")
+            else:
+                self.check_guess(guess)
+                self.list_of_guesses.append(guess)
+                break
+```
