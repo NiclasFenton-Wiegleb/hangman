@@ -47,7 +47,8 @@ class Hangman:
                 break
 
 def play_game(word_list):
-    game = Hangman(word_list)
+    num_lives = 5
+    game = Hangman(word_list, num_lives)
     while True:
         if game.num_lives == 0:
             print('You lost!\nThe word was '+game.word+'.')
@@ -55,7 +56,7 @@ def play_game(word_list):
         elif game.num_letters > 0:
             game.ask_for_input()
         else:
-            print("Congratulations. You've won the game!")
+            print("Congratulations. You won the game!")
             break
 
 play_game(fruit_lst)
